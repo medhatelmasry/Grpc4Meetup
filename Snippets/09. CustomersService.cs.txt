@@ -1,0 +1,28 @@
+public class CustomersService : CustomerRemote.CustomerRemoteBase {
+  private readonly ILogger<CustomersService> _logger;
+  private readonly NorthwindContext _context;
+
+  public CustomersService(ILogger<CustomersService> logger, NorthwindContext context) {
+    _logger = logger;
+    _context = context;
+  }
+
+  public override Task<CustomerModel> GetCustomerInfo(CustomerLookupModel request, ServerCallContext context)
+  {
+    CustomerModel output = new CustomerModel();
+
+    Customers c = _context.Customers.Find(request.CustomerId);
+
+    _logger.LogInformation("Sending Customer response");
+
+    if (c != null) {
+      output.CustomerId = c.CustomerId;
+      output.CompanyName = c.CompanyName;
+      output.ContactName = c.ContactName;
+      output.City = c.City;
+      output.Country = c.Country;
+    }
+
+    return Task.FromResult(output);
+  }
+}

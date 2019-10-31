@@ -1,0 +1,6 @@
+docker run -d --name northwind -p 1444:1433 kcornwall/sqlnorthwind
+
+sa >> Passw0rd2018
+
+docker ps
+

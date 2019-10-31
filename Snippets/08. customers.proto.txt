@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServer.Protos";
+
+// The customer service definition.
+service CustomerRemote {
+  rpc GetCustomerInfo (CustomerLookupModel) returns (CustomerModel);
+}
+
+// The request message 
+message CustomerLookupModel {
+  string customerId = 1;
+}
+
+// The response message 
+message CustomerModel {
+  string customerId = 1;
+  string companyName = 2;
+  string contactName = 3;
+  string city = 4;
+  string country = 5;
+}

@@ -1,0 +1,2 @@
+services.AddDbContext<NorthwindContext>(options =>
+  options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));

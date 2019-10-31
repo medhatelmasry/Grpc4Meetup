@@ -1,0 +1,3 @@
+"ConnectionStrings": {
+  "DefaultConnection": " Data Source=localhost,1444;Database=Northwind;Persist Security Info=True;User ID=sa;Password= Passw0rd2018;"
+},

@@ -1,0 +1,4 @@
+private IConfiguration _configuration { get; }
+public Startup(IConfiguration configuration) {
+  _configuration = configuration;
+}

@@ -1,0 +1,5 @@
+var channel = GrpcChannel.ForAddress("https://localhost:5001");
+var customerClient = new CustomerRemote.CustomerRemoteClient(channel);
+var custInput = new CustomerLookupModel { CustomerId = "FISSA" };
+var custReply = await customerClient.GetCustomerInfoAsync(custInput);
+Console.WriteLine($"{custReply.CompanyName} {custReply.City}");

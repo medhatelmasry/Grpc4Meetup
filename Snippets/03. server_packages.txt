@@ -1,0 +1,11 @@
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer.Design
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+dotnet add package Grpc.Tools
+
+Install-Package Microsoft.EntityFrameworkCore.Design
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.EntityFrameworkCore.SqlServer.Design
+Install-Package Microsoft.EntityFrameworkCore.Tools
+Install-Package Grpc.Tools
